@@ -1,0 +1,29 @@
+import random
+import time
+print("How much money do you want to put in your account??(Not more then 5$ otherwise it will be boring)")
+Money=input()
+Money=int(Money)
+while True:
+  print("Do you want to roll the dice?")
+  Answer=input()
+  if Answer==("Yes") or Answer==("yes"):
+    Dice1=random.randint(1,6)
+    Dice2=random.randint(1,6)
+    print("Please wait.....")
+    time.sleep(2)
+  else:
+    print("Thank you for playing")
+    break
+  if Dice1==Dice2:
+    print ("You Won!+1,000,000 Money!")
+    Money=Money+1000000
+    print("OMG U WON U GOT 1 MILLION DOLLARS OMGGG")
+    print("You now have",Money,"dollars left")
+  else:
+    print("You Lost -1 Money:(")
+    Money=Money-1
+    print("You have",Money,"dollars left")
+  if Money==(0):
+    print("Game Over")
+    break
+    
